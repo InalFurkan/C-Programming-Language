@@ -19,3 +19,5 @@ int main(void)
 	
 	return 0;
 }
+
+//A c program which calculates the area and the circumference of a circle.
