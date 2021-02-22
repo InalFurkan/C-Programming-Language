@@ -5,17 +5,19 @@
 #include <stdbool.h>
 
 
-void gotoxy(short x, short y){                                                       
- COORD pos = {x,y};
- SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);}
+void gotoxy(short x, short y)
+{                                                       
+	COORD pos = {x,y};
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
 
 main(void)
 {
-	int		input,
-			x = 5, y = 5;
+	int	input,
+		x = 5, y = 5;
 	    
 	bool	exit = false,
-			draw = false;
+		draw = false;
 	    
 	    
 	while(exit == false)
@@ -35,12 +37,12 @@ main(void)
 		
 		switch(input)
 		{
-            case 77: x = (x < 119) ? x + 1 : x; break;
-            case 75: x = (x > 0) ? x - 1 : x; break;
-            case 80: y = (y < 28) ? y + 1 : y; break;
-            case 72: y = (y > 0) ? y - 1 : y; break;
-            case 32: draw = (draw == false) ? true : false; break;
-        }    
+            		case 77: x = (x < 119) ? x + 1 : x; break;
+            		case 75: x = (x > 0) ? x - 1 : x; break;
+            		case 80: y = (y < 28) ? y + 1 : y; break;
+            		case 72: y = (y > 0) ? y - 1 : y; break;
+			case 32: draw = (draw == false) ? true : false; break;
+       		}    
         
 		if(draw == false)
 		{
